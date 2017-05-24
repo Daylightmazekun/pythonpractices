@@ -13,3 +13,5 @@
 * 5 planeGame folder is a game play same as wechat plane game
 
 * 6 2048test is a 2048 game run with Linux
+
+* 7 music163 scrpy music.163.com and save in mysql
