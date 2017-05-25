@@ -3,7 +3,6 @@
 # author: Glad Ma Zekun
 import requests
 from bs4 import BeautifulSoup
-from music_163 import mysql
 import sys
 reload(sys)
 sys.setdefaultencoding('utf8')
@@ -18,24 +17,25 @@ headers = {
     'DNT': '1',
     'Host': 'music.163.com',
     'Pragma': 'no-cache',
-    'Referer': 'http://music.163.com/',
+    'Referer': 'http://www.szjt.gov.cn/apts/APTSLine.aspx?LineGuid=52f67e87-dcb7-43ff-b632-e2a582c9f544&LineInfo=120(%E8%BD%A6%E5%9D%8A%E9%A6%96%E6%9C%AB%E7%AB%99=%3E%E8%BD%A6%E5%9D%8A%E9%A6%96%E6%9C%AB%E7%AB%99)',
     'Upgrade-Insecure-Requests': '1',
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.143 Safari/537.36'
 }
 
-def save_artist(group_id, initial):
-    params = {'id': group_id, 'initial': initial}
-    r = requests.get('http://music.163.com/discover/artist/cat', params=params)
+def get_bus_station(url):
+    r = requests.get(url)
 
     soup = BeautifulSoup(r.content.decode(), 'html.parser')
     body = soup.body
 
-    hot_artists = body.find_all('a', attrs={'class': 'msk'})
-    artists = body.find_all('a', attrs={'class': 'nm nm-icn f-thide s-fc0'})
+    #hot_artists = body.find_all('a', attrs={'t': 'msk'})
+    #bus = body.find_all('a',attrs={'href': 'default.aspx?StandCode=EBW&StandName=新加花园东'})
+    tables = body.find_all('table')
+    bus_table = tables[0]
+    for tr in bus_table.find_all('tr'):
+        for td in tr.find_all('td'):
+            print td.getText()
 
-    print hot_artists
-gg = 4003
-
-save_artist(gg, 0)
-for i in range(65, 91):
-    save_artist(gg, i)
+if __name__ == '__main__':
+    url = 'http://www.szjt.gov.cn/apts/APTSLine.aspx?LineGuid=52f67e87-dcb7-43ff-b632-e2a582c9f544&LineInfo=120(%E8%BD%A6%E5%9D%8A%E9%A6%96%E6%9C%AB%E7%AB%99=%3E%E8%BD%A6%E5%9D%8A%E9%A6%96%E6%9C%AB%E7%AB%99)'
+    get_bus_station(url)

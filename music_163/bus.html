@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-cn">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>
+        线路实时状态
+    </title>
+    <link href="Styles/Site.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<form method="post"
+      action="APTSLine.aspx?LineGuid=52f67e87-dcb7-43ff-b632-e2a582c9f544&amp;LineInfo=120(%u8f66%u574a%u9996%u672b%u7ad9%3d%3e%u8f66%u574a%u9996%u672b%u7ad9)"
+      id="ctl01">
+    <div class="aspNetHidden">
+        <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE"
+               value="/wEPDwUJNDk3MjU2MjgyZGR8HyHnT1+e3HZ20wpLZv21dVDesYYkdXIkC0bNjmdinA=="/>
+    </div>
+
+    <div class="aspNetHidden">
+
+        <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="964EC381"/>
+        <input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION"
+               value="/wEWBAKZ8JWACwL88Oh8AqX89aoKAqaIs48BrEgcH1ySbG07GrJrDPmiI8YXuaGQSwHAHYuGfO/luSk="/>
+    </div>
+    <div class="page">
+        <div class="header">
+            <div class="title">
+                <h1>
+                    苏州公交实时查询信息（仅供参考）
+                </h1>
+            </div>
+            <div class="clear hideSkiplink">
+                <table cellpadding="0" cellspacing="0" border="0">
+                    <tr>
+                        <td>
+                            <a class="menuItem" href="default.aspx">
+                                [电子站牌]
+                            </a>
+                        </td>
+                        <td style="width: 3px;">
+                        </td>
+                        <td>
+                            <a class="menuItem" href="APTSLine.aspx">
+                                [线路状态]
+                            </a>
+                        </td>
+                        <td>
+                            <a class="menuItem" href="help.aspx">
+                                [使用说明]
+                            </a>
+                        </td>
+                        <td>
+                            <a class="menuItem" href="../Page/BusInfo.htm">
+                                [公交线路查询]
+                            </a>
+                        </td>
+                        <td>
+                            <a class="menuItem" href="../Page/Rail.htm">
+                                [轨道线路查询]
+                            </a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="main">
+
+            <div>
+                线路番号：<input name="ctl00$MainContent$LineName" type="text" id="MainContent_LineName"
+                            style="width:80px;"/>
+                <input type="submit" name="ctl00$MainContent$SearchLine" value="搜索" id="MainContent_SearchLine"/>
+                <br/>
+                <span id="MainContent_LineInfo">120(车坊首末站=>车坊首末站)</span><input type="submit"
+                                                                               name="ctl00$MainContent$Refresh"
+                                                                               value="刷新" id="MainContent_Refresh"/>
+                <br/>
+                <span id="MainContent_DATA"><?xml version="1.0" encoding="utf-16"?>
+                    <table cellspacing="0" border="1">
+                <tr>
+                <th>站台</th>
+                    <th>编号</th>
+                    <th>车牌</th>
+                    <th>进站时间</th>
+                </tr><tr><td><a href="default.aspx?StandCode=MMV&amp;StandName=车坊首末站">车坊首末站</a></td><td>MMV</td><td></td><td></td></tr><tr><td><a
+                            href="default.aspx?StandCode=RDX&amp;StandName=淞泽家园七区">淞泽家园七区</a></td><td>RDX</td><td></td><td></td></tr><tr><td><a
+                            href="default.aspx?StandCode=DFE&amp;StandName=淞泽家园六区">淞泽家园六区</a></td><td>DFE</td><td></td><td></td></tr><tr><td><a
+                            href="default.aspx?StandCode=PMS&amp;StandName=新平街润泽街">新平街润泽街</a></td><td>PMS</td><td></td><td></td></tr><tr><td><a
+                            href="default.aspx?StandCode=MFS&amp;StandName=淞泽家园九区">淞泽家园九区</a></td><td>MFS</td><td></td><td></td></tr><tr><td><a
+                            href="default.aspx?StandCode=CYE&amp;StandName=淞泽家园二区">淞泽家园二区</a></td><td>CYE</td><td></td><td></td></tr><tr><td><a
+                            href="default.aspx?StandCode=ECF&amp;StandName=车坊国土资源所">车坊国土资源所</a></td><td>ECF</td><td></td><td></td></tr><tr><td><a
+                            href="default.aspx?StandCode=MNR&amp;StandName=车坊">车坊</a></td><td>MNR</td><td></td><td></td></tr><tr><td><a
+                            href="default.aspx?StandCode=GRW&amp;StandName=车斜三号桥">车斜三号桥</a></td><td>GRW</td><td></td><td></td></tr><tr><td><a
+                            href="default.aspx?StandCode=PUD&amp;StandName=职业技术学院南">职业技术学院南</a></td><td>PUD</td><td></td><td></td></tr><tr><td><a
+                            href="default.aspx?StandCode=PUE&amp;StandName=职业技术学院北">职业技术学院北</a></td><td>PUE</td><td>苏E-12079</td><td>21:23:47</td></tr><tr><td><a
+                            href="default.aspx?StandCode=PUG&amp;StandName=苏州评弹学校北">苏州评弹学校北</a></td><td>PUG</td><td></td><td></td></tr><tr><td><a
+                            href="default.aspx?StandCode=RBK&amp;StandName=园区工业技术学校">园区工业技术学校</a></td><td>RBK</td><td></td><td></td></tr><tr><td><a
+                            href="default.aspx?StandCode=PRB&amp;StandName=松涛街创苑路北">松涛街创苑路北</a></td><td>PRB</td><td></td><td></td></tr><tr><td><a
+                            href="default.aspx?StandCode=RBJ&amp;StandName=苏大公寓南区">苏大公寓南区</a></td><td>RBJ</td><td></td><td></td></tr><tr><td><a
+                            href="default.aspx?StandCode=MMY&amp;StandName=苏大公寓北区">苏大公寓北区</a></td><td>MMY</td><td></td><td></td></tr><tr><td><a
+                            href="default.aspx?StandCode=FZZ&amp;StandName=人大国际学院东">人大国际学院东</a></td><td>FZZ</td><td></td><td></td></tr><tr><td><a
+                            href="default.aspx?StandCode=MMZ&amp;StandName=莲花新村五区">莲花新村五区</a></td><td>MMZ</td><td></td><td></td></tr><tr><td><a
+                            href="default.aspx?StandCode=MNB&amp;StandName=莲新桥南">莲新桥南</a></td><td>MNB</td><td></td><td></td></tr><tr><td><a
+                            href="default.aspx?StandCode=BRV&amp;StandName=荷韵新村南区">荷韵新村南区</a></td><td>BRV</td><td></td><td></td></tr><tr><td><a
+                            href="default.aspx?StandCode=ECR&amp;StandName=荷韵新村">荷韵新村</a></td><td>ECR</td><td></td><td></td></tr><tr><td><a
+                            href="default.aspx?StandCode=HHS&amp;StandName=大地乐章东">大地乐章东</a></td><td>HHS</td><td></td><td></td></tr><tr><td><a
+                            href="default.aspx?StandCode=CGK&amp;StandName=橄榄湾">橄榄湾</a></td><td>CGK</td><td></td><td></td></tr><tr><td><a
+                            href="default.aspx?StandCode=FJA&amp;StandName=金姬墩">金姬墩</a></td><td>FJA</td><td></td><td></td></tr><tr><td><a
+                            href="default.aspx?StandCode=EEY&amp;StandName=西洲路">西洲路</a></td><td>EEY</td><td></td><td></td></tr><tr><td><a
+                            href="default.aspx?StandCode=FHP&amp;StandName=星湖首末站北">星湖首末站北</a></td><td>FHP</td><td></td><td></td></tr><tr><td><a
+                            href="default.aspx?StandCode=MCC&amp;StandName=摩天轮公园">摩天轮公园</a></td><td>MCC</td><td></td><td></td></tr><tr><td><a
+                            href="default.aspx?StandCode=JWD&amp;StandName=圆融时代广场">圆融时代广场</a></td><td>JWD</td><td>苏E-3U679</td><td>21:25:23</td></tr><tr><td><a
+                            href="default.aspx?StandCode=JWF&amp;StandName=圆融天幕街">圆融天幕街</a></td><td>JWF</td><td></td><td></td></tr><tr><td><a
+                            href="default.aspx?StandCode=MGG&amp;StandName=国际博览中心东">国际博览中心东</a></td><td>MGG</td><td></td><td></td></tr><tr><td><a
+                            href="default.aspx?StandCode=CGZ&amp;StandName=国际博览中心">国际博览中心</a></td><td>CGZ</td><td></td><td></td></tr><tr><td><a
+                            href="default.aspx?StandCode=BRJ&amp;StandName=艺术中心北">艺术中心北</a></td><td>BRJ</td><td></td><td></td></tr><tr><td><a
+                            href="default.aspx?StandCode=ENX&amp;StandName=凤鸣街南">凤鸣街南</a></td><td>ENX</td><td></td><td></td></tr><tr><td><a
+                            href="default.aspx?StandCode=GMY&amp;StandName=沁苑小区">沁苑小区</a></td><td>GMY</td><td></td><td></td></tr><tr><td><a
+                            href="default.aspx?StandCode=EBW&amp;StandName=新加花园东">新加花园东</a></td><td>EBW</td><td>苏E-12027</td><td>21:25:55</td></tr><tr><td><a
+                            href="default.aspx?StandCode=DWH&amp;StandName=新加花园西">新加花园西</a></td><td>DWH</td><td></td><td></td></tr><tr><td><a
+                            href="default.aspx?StandCode=EVV&amp;StandName=新城邻里中心">新城邻里中心</a></td><td>EVV</td><td></td><td></td></tr><tr><td><a
+                            href="default.aspx?StandCode=AXT&amp;StandName=新城花园">新城花园</a></td><td>AXT</td><td></td><td></td></tr><tr><td><a
+                            href="default.aspx?StandCode=FBV&amp;StandName=印象城北">印象城北</a></td><td>FBV</td><td></td><td></td></tr><tr><td><a
+                            href="default.aspx?StandCode=NJJ&amp;StandName=印象城西">印象城西</a></td><td>NJJ</td><td></td><td></td></tr><tr><td><a
+                            href="default.aspx?StandCode=NJK&amp;StandName=百安居西">百安居西</a></td><td>NJK</td><td></td><td></td></tr><tr><td><a
+                            href="default.aspx?StandCode=BPN&amp;StandName=夏园新村">夏园新村</a></td><td>BPN</td><td>苏E-3U676</td><td>21:24:24</td></tr><tr><td><a
+                            href="default.aspx?StandCode=HKU&amp;StandName=苏大东校区">苏大东校区</a></td><td>HKU</td><td></td><td></td></tr><tr><td><a
+                            href="default.aspx?StandCode=BYB&amp;StandName=葑门换乘站东">葑门换乘站东</a></td><td>BYB</td><td></td><td></td></tr><tr><td><a
+                            href="default.aspx?StandCode=GVJ&amp;StandName=金鸡湖大道西">金鸡湖大道西</a></td><td>GVJ</td><td></td><td></td></tr><tr><td><a
+                            href="default.aspx?StandCode=ANM&amp;StandName=东振路西">东振路西</a></td><td>ANM</td><td></td><td></td></tr><tr><td><a
+                            href="default.aspx?StandCode=DWS&amp;StandName=葑谊新村">葑谊新村</a></td><td>DWS</td><td></td><td></td></tr><tr><td><a
+                            href="default.aspx?StandCode=GAK&amp;StandName=南摆宴街">南摆宴街</a></td><td>GAK</td><td></td><td></td></tr><tr><td><a
+                            href="default.aspx?StandCode=CWY&amp;StandName=群力村">群力村</a></td><td>CWY</td><td></td><td></td></tr><tr><td><a
+                            href="default.aspx?StandCode=DCR&amp;StandName=群星路">群星路</a></td><td>DCR</td><td></td><td></td></tr><tr><td><a
+                            href="default.aspx?StandCode=CYT&amp;StandName=群星一路">群星一路</a></td><td>CYT</td><td></td><td></td></tr><tr><td><a
+                            href="default.aspx?StandCode=AWR&amp;StandName=群星二路">群星二路</a></td><td>AWR</td><td></td><td></td></tr><tr><td><a
+                            href="default.aspx?StandCode=EWB&amp;StandName=群星三路">群星三路</a></td><td>EWB</td><td>苏E-12071</td><td>21:24:32</td></tr><tr><td><a
+                            href="default.aspx?StandCode=DDB&amp;StandName=通达路">通达路</a></td><td>DDB</td><td></td><td></td></tr><tr><td><a
+                            href="default.aspx?StandCode=FWV&amp;StandName=塘南村">塘南村</a></td><td>FWV</td><td></td><td></td></tr><tr><td><a
+                            href="default.aspx?StandCode=BBR&amp;StandName=独墅村">独墅村</a></td><td>BBR</td><td></td><td></td></tr><tr><td><a
+                            href="default.aspx?StandCode=MNT&amp;StandName=浮桥村">浮桥村</a></td><td>MNT</td><td></td><td></td></tr><tr><td><a
+                            href="default.aspx?StandCode=JDN&amp;StandName=湾里村">湾里村</a></td><td>JDN</td><td></td><td></td></tr><tr><td><a
+                            href="default.aspx?StandCode=FBW&amp;StandName=黄潦村">黄潦村</a></td><td>FBW</td><td></td><td></td></tr><tr><td><a
+                            href="default.aspx?StandCode=RGY&amp;StandName=星湖街东方大道南">星湖街东方大道南</a></td><td>RGY</td><td></td><td></td></tr><tr><td><a
+                            href="default.aspx?StandCode=MMW&amp;StandName=车坊首末站">车坊首末站</a></td><td>MMW</td><td>苏E-3W803</td><td>21:22:14</td></tr></table></span>
+            </div>
+
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+    <div class="footer">
+    </div>
+</form>
+</body>
+</html>

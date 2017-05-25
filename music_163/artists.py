@@ -5,7 +5,9 @@
 import requests
 from bs4 import BeautifulSoup
 from music_163 import mysql
-
+import sys
+reload(sys)
+sys.setdefaultencoding('utf8')
 headers = {
     'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
     'Accept-Encoding': 'gzip, deflate, sdch',
@@ -34,7 +36,7 @@ def save_artist(group_id, initial):
         artist_id = artist['href'].replace('/artist?id=', '').strip()
         artist_name = artist['title'].replace('的音乐', '')
         try:
-            mysql.insert_artist(artist_id, artist_name)
+            print artist_id, artist_name
         except Exception as e:
 
             print(e)
@@ -45,11 +47,10 @@ def save_artist(group_id, initial):
         try:
             mysql.insert_artist(artist_id, artist_name)
         except Exception as e:
-            # 打印错误日志
             print(e)
 
 
-gg = 4003
+gg = 1001
 
 save_artist(gg, 0)
 for i in range(65, 91):
