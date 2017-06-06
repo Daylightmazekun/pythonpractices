@@ -40,7 +40,7 @@ class Comments(object):
         self.header['Referer']='http://music.163.com/playlist?id=' + str(music_id)
         if flag:
             r = requests.post('http://music.163.com/weapi/v1/resource/comments/R_SO_4_' + str(music_id),
-                              headers=self.headers, params=self.params, data=self.data, proxies=self.proxies)
+                              headers=self.headers, params  =self.params, data=self.data, proxies=self.proxies)
 
         else:
             r = requests.post('http://music.163.com/weapi/v1/resource/comments/R_SO_4_' + str(music_id),
