@@ -4,7 +4,7 @@
 
 import requests
 from bs4 import BeautifulSoup
-from music_163 import mysql
+import mysql
 import sys
 reload(sys)
 sys.setdefaultencoding('utf8')
@@ -22,36 +22,41 @@ headers = {
     'Upgrade-Insecure-Requests': '1',
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.143 Safari/537.36'
 }
+
+
 def save_artist(group_id, initial):
     params = {'id': group_id, 'initial': initial}
-    r = requests.get('http://music.163.com/discover/artist/cat', params=params)
+    r = requests.get('https://music.163.com/discover/artist/cat', params=params)
 
+    # 网页解析    
     soup = BeautifulSoup(r.content.decode(), 'html.parser')
     body = soup.body
-
-    hot_artists = body.find_all('a', attrs={'class': 'msk'})
+    print body
+    hot_artists = body.find_all('a', attrs={'class': '    '})
     artists = body.find_all('a', attrs={'class': 'nm nm-icn f-thide s-fc0'})
 
     for artist in hot_artists:
         artist_id = artist['href'].replace('/artist?id=', '').strip()
         artist_name = artist['title'].replace('的音乐', '')
         try:
-            print artist_id, artist_name
+            sql.insert_artist(artist_id, artist_name)
         except Exception as e:
-
+            # 打印错误日志
             print(e)
 
     for artist in artists:
         artist_id = artist['href'].replace('/artist?id=', '').strip()
         artist_name = artist['title'].replace('的音乐', '')
         try:
-            mysql.insert_artist(artist_id, artist_name)
+            sql.insert_artist(artist_id, artist_name)
         except Exception as e:
+            # 打印错误日志
             print(e)
+
 
 
 gg = 1001
 
-save_artist(gg, 0)
-for i in range(65, 91):
-    save_artist(gg, i)
+save_artist(gg, 65)
+# for i in range(65, 90):
+#     save_artist(gg, i)

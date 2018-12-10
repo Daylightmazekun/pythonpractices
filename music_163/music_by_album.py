@@ -2,7 +2,7 @@
 # encoding: utf-8  
 # author: Glad Ma Zekun
 import requests
-from music_163 import mysql
+import mysql
 from bs4 import BeautifulSoup
 import requests
 import sys

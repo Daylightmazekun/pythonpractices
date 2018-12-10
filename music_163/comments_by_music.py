@@ -66,14 +66,14 @@ if __name__ == '__main__':
     music_after = mysql.get_after_music()
     connection1 = pymysql.connect(host='localhost',
                                   user='root',
-                                  password='misakamikoto',
+                                  password='QQpp1111',
                                   db='test',
                                   charset='utf8mb4',
                                   cursorclass=pymysql.cursors.DictCursor)
 
     connection2 = pymysql.connect(host='localhost',
                                   user='root',
-                                  password='misakamikoto',
+                                  password='QQpp1111',
                                   db='test',
                                   charset='utf8mb4',
                                   cursorclass=pymysql.cursors.DictCursor)

@@ -1,0 +1,7 @@
+eclipse.preferences.version=1
+encoding/album_by_artist.py=utf-8
+encoding/artists.py=utf-8
+encoding/comments_by_music.py=utf-8
+encoding/music_by_album.py=utf-8
+encoding/mysql.py=utf-8
+encoding/test.py=utf-8

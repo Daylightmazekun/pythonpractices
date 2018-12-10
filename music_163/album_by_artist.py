@@ -5,7 +5,7 @@ import sys
 import requests
 from bs4 import BeautifulSoup
 import time
-from music_163 import mysql
+import mysql
 reload(sys)
 sys.setdefaultencoding('utf-8')
 class Album(object):
